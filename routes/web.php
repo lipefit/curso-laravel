@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('products', 'ProductController');
+Route::resource('products', 'ProductController');//->middleware(['auth'])->except(['index','show']);
 
 /*
 Route::delete('/products/{id}/delete', 'ProductController@destroy')->name('products.destroy');
